@@ -79,28 +79,23 @@ HERO
 <!-- =========================
 ABOUT TRANSITION SECTION
 ========================= -->
-<section class="about-preview">
+  <section class="about-preview fade">
   <div class="about-container">
 
     <div class="about-text">
-
       <span class="about-label">About Us</span>
-
       <h2 class="about-title">
         The quality of our work is quality for your life
       </h2>
-
       <p>
         With over 50 years of experience and the loyalty of our clients, we offer 
         personalized and functional solutions in wood and stone with high-quality 
         materials, combining technology, safety, and excellence in each residential 
         or commercial project.
       </p>
-
       <a href="/artemisamarbleandcabinet/aboutus/" class="about-btn">
         Learn More
       </a>
-
     </div>
 
     <div class="about-image">
@@ -183,6 +178,26 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
 });
 
+  // FADE LATERAL PREMIUM PARA ABOUT
+const aboutText = document.querySelector('.about-text');
+const aboutImage = document.querySelector('.about-image');
+
+const appearOptions = {
+  threshold: 0.3,
+  rootMargin: "0px 0px -50px 0px"
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('show');
+    observer.unobserve(entry.target);
+  });
+}, appearOptions);
+
+observer.observe(aboutText);
+observer.observe(aboutImage);
+  
 /* FADE ON SCROLL */
 const faders = document.querySelectorAll('.fade');
 const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
