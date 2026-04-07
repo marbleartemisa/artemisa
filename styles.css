@@ -195,21 +195,33 @@ TRANSITION
 /* =========================
 ABOUT (FIXED + PRO)
 ========================= */
+
+
 .about-preview {
-  padding: 140px 20px;
+  padding: 80px;
+  background: #0b0b0f;
 }
 
-
 .about-container {
-  max-width: 1500px;              /* 👈 más ancho */
+  max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 0.7fr 1.8fr;  /* 👈 imagen dominante real */
+
+  grid-template-columns: 1fr 1.6fr; /* 👈 AQUÍ */
+
+  height: 90vh;
   gap: 80px;
   align-items: center;
 }
 
 /* TEXT */
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
 .about-text h2 {
   font-size: 44px;
   font-family: 'Playfair Display', serif;
@@ -240,20 +252,20 @@ ABOUT (FIXED + PRO)
 }
 
 /* IMAGE */
+
 .about-image {
+  height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
-
-
 
 .about-image img {
   width: 100%;
   height: 100%;
-  max-height: none;        /* 👈 clave */
   object-fit: cover;
+  transform: scale(1.05);
   border-radius: 16px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
 }
 
 .about-image img:hover {
