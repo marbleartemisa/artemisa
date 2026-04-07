@@ -310,6 +310,9 @@ SOLUTIONS
   width: 100%;
   border-radius: 15px;
 }
+.card {
+  position: relative;
+}
 
 .card span {
   position: absolute;
