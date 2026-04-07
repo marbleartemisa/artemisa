@@ -197,14 +197,45 @@ faders.forEach(fader => appearOnScroll.observe(fader));
 
 /* CARRUSEL AUTOMATICO */
 const carousel = document.querySelector('.carousel');
-let scrollAmount = 0;
-function autoScroll() {
-  if(!carousel) return;
-  scrollAmount += 1;
-  if(scrollAmount > carousel.scrollWidth - carousel.clientWidth) scrollAmount = 0;
-  carousel.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+
+if (carousel) {
+  let speed = 0;
+
+  function autoScroll() {
+    speed += 1;
+
+    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+
+    if (speed >= maxScroll) {
+      speed = 0;
+    }
+
+    carousel.scrollLeft = speed;
+  }
+
+  setInterval(autoScroll, 16);
 }
-setInterval(autoScroll, 30);
+
+  const counters = document.querySelectorAll('.stats h3');
+
+counters.forEach(counter => {
+  const target = +counter.innerText.replace('%','');
+  let count = 0;
+
+  const update = () => {
+    const increment = target / 100;
+
+    if (count < target) {
+      count += increment;
+      counter.innerText = Math.ceil(count) + (counter.innerText.includes('%') ? '%' : '');
+      requestAnimationFrame(update);
+    } else {
+      counter.innerText = target + (counter.innerText.includes('%') ? '%' : '');
+    }
+  };
+
+  update();
+});
 </script>
 
 </body>
