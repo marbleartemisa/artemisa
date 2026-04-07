@@ -204,10 +204,12 @@ ABOUT SECTION (PREMIUM)
   width: 100%;
 }
 
+
+
 .about-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 100vh;
+  /* height: 100vh; eliminar para que no tape otros elementos */
   min-height: 700px;
   gap: 80px;
   align-items: stretch;
