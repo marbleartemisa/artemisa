@@ -304,6 +304,10 @@ SOLUTIONS
   left: 10px;
 }
 
+.about-image {
+  height: 600px;   /* 👈 controla tamaño visual grande */
+}
+
 /* =========================
 VISIBILITY
 ========================= */
@@ -345,4 +349,19 @@ MOBILE
   .stats {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+.about-label {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+
+.about-title {
+  font-size: 48px;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.1;
+  margin: 15px 0 20px;
+  max-width: 500px;
 }
