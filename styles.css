@@ -199,11 +199,12 @@ ABOUT (FIXED + PRO)
   padding: 140px 20px;
 }
 
+
 .about-container {
-  max-width: 1200px;
+  max-width: 1400px;              /* 👈 más ancho */
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1.5fr; /* 👈 imagen más grande */
+  grid-template-columns: 0.7fr 1.8fr;  /* 👈 imagen dominante real */
   gap: 80px;
   align-items: center;
 }
