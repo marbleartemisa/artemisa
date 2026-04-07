@@ -14,7 +14,9 @@ html, body {
   background: #0b0b0f;
   color: white;
 }
-
+body {
+  padding: 0 40px;
+}
 /* =========================
 TOP BAR
 ========================= */
@@ -205,13 +207,13 @@ ABOUT (FIXED + PRO)
 .about-container {
   max-width: 1400px;
   margin: 0 auto;
+
   display: grid;
+  grid-template-columns: 1fr 1.8fr;
 
-  grid-template-columns: 1fr 1.6fr; /* 👈 AQUÍ */
-
-  height: 90vh;
+  height: 100vh;        /* 👈 clave real (pantalla completa) */
   gap: 80px;
-  align-items: center;
+  align-items: stretch; /* 👈 no center */
 }
 
 /* TEXT */
@@ -220,7 +222,6 @@ ABOUT (FIXED + PRO)
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
 }
 .about-text h2 {
   font-size: 44px;
@@ -255,17 +256,16 @@ ABOUT (FIXED + PRO)
 
 .about-image {
   height: 100%;
-  display: flex;
-  justify-content: flex-end;
 }
+
 
 .about-image img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
-  transform: scale(1.05);
+
   border-radius: 16px;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
 }
 
 .about-image img:hover {
@@ -317,9 +317,7 @@ SOLUTIONS
   left: 10px;
 }
 
-.about-image {
-  height: 600px;   /* 👈 controla tamaño visual grande */
-}
+
 
 /* =========================
 VISIBILITY
