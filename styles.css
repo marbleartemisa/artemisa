@@ -201,7 +201,7 @@ ABOUT (FIXED + PRO)
 
 
 .about-container {
-  max-width: 1600px;              /* 👈 más ancho */
+  max-width: 1500px;              /* 👈 más ancho */
   margin: 0 auto;
   display: grid;
   grid-template-columns: 0.7fr 1.8fr;  /* 👈 imagen dominante real */
