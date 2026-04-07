@@ -198,23 +198,24 @@ TRANSITION
 ABOUT (FIXED + PRO)
 ========================= */
 
-
 .about-preview {
-  padding: 80px;
-  background: #0b0b0f;
+  padding: 0;
 }
 
 .about-container {
-  max-width: 1400px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
 
   display: grid;
-  grid-template-columns: 1fr 1.8fr;
+ grid-template-columns: 1fr 1fr;
 
   height: 100vh;        /* 👈 clave real (pantalla completa) */
+  min-height: 700px;
   gap: 80px;
   align-items: stretch; /* 👈 no center */
 }
+
+
 
 /* TEXT */
 
@@ -222,7 +223,12 @@ ABOUT (FIXED + PRO)
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 80px;
+  max-width: 600px;
+  margin: auto;
+  background: #0b0b0f;
 }
+
 .about-text h2 {
   font-size: 44px;
   font-family: 'Playfair Display', serif;
@@ -265,8 +271,13 @@ ABOUT (FIXED + PRO)
 
   object-fit: cover;
 
-  border-radius: 16px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0; /* 🔥 clave */
 }
+
+
 
 .about-image img:hover {
   transform: scale(1.03);
@@ -356,9 +367,13 @@ MOBILE
     text-align: center;
   }
 
+  
+
+ 
   .about-text p {
-    margin: auto;
-  }
+  font-size: 16px;
+  line-height: 1.8;
+}
 
   .stats {
     grid-template-columns: 1fr 1fr;
@@ -370,14 +385,12 @@ MOBILE
   letter-spacing: 2px;
   text-transform: uppercase;
   color: rgba(255,255,255,0.5);
-}
+
 
 .about-title {
-  font-size: 48px;
-  font-family: 'Playfair Display', serif;
-  line-height: 1.1;
-  margin: 15px 0 20px;
-  max-width: 500px;
+  font-size: 56px;
+  line-height: 1.05;
+  margin: 20px 0;
 }
 .carousel {
   display: flex;
