@@ -1,47 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Artemisa Marble</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artemisa Marble & Cabinet</title>
+
+<!-- Estilos -->
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<!-- NAVBAR -->
+<!-- =========================
+TOP BAR
+========================= -->
+<div class="topbar">
+  <div class="topbar-left desktop-only">
+    830 W 19th ST, Hialeah Florida 33010 • (305) 884-1223 • info@artemisamarble.com
+  </div>
+
+  <div class="logo-center">
+    <img src="logo.png" alt="Artemisa Marble & Cabinet">
+  </div>
+
+  <div class="hamburger mobile-only" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<!-- =========================
+NAVBAR
+========================= -->
 <header class="navbar">
-  <div class="logo">A</div>
-  <nav>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Solutions</a>
-    <a href="#">Dreams</a>
-    <a href="#">FAQs</a>
-    <a href="#">Contact</a>
+  <nav id="navMenu">
+    <a href="/artemisamarbleandcabinet/">Home</a>
+    <a href="/artemisamarbleandcabinet/aboutus/">About Us</a>
+    <a href="/artemisamarbleandcabinet/kitchen/">Kitchen</a>
+    <a href="/artemisamarbleandcabinet/bathroom/">Bathroom</a>
+    <a href="/artemisamarbleandcabinet/cabinets/">Cabinets</a>
+    <a href="/artemisamarbleandcabinet/closets/">Closets</a>
+    <a href="/artemisamarbleandcabinet/contact/">Contact</a>
+    <a class="portal-btn" href="https://marbleartemisa.github.io/sop-site/">Portal-SOP</a>   
   </nav>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-text fade">
-    <h1>The quality of our work is quality for your life</h1>
-    <p>With 50 years of experience, we offer personalized and functional solutions in wood and stone.</p>
-    <button>Work with us →</button>
-  </div>
-  <div class="hero-img fade">
-    <img src="img/selec1.jpg" alt="Hero">
+<!-- =========================
+HERO
+========================= -->
+<section class="hero fade">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <div class="hero-top-row">
+      <div class="company-name">Artemisa Marble & Cabinet</div>
+      <div class="hero-tagline">Luxury Stone & Custom Interiors</div>
+    </div>
+    <p>
+      Crafting high-end kitchens with precision, elegance, and natural beauty.
+      We specialize in custom-made kitchen cabinets, bathrooms, closets,
+      TV walls, fireplaces, and more, using premium materials like granite,
+      quartz, marble, dekton, gemstone, and semi-precious stones.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="catalogo/index.html" class="primary">Explore Catalog</a>
+      <a href="https://artemisa_marble_cabinets_inc.quotekitchenandbath.com/kitchen#/materials/countertops/countertop" class="secondary" target="_blank">Get Quote</a>
+    </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="about fade">
-  <div class="about-text">
-    <h2>Home Improvement Specialists</h2>
-    <p>Kitchens, Bathrooms, stone or wood wall-claddings, fireplaces, shelving, offices, and more.</p>
-  </div>
+<!-- =========================
+FRAMER CLONE SECTIONS
+========================= -->
 
-  <div class="gallery carousel">
+<!-- CARRUSEL / GALERIA -->
+<section class="carousel-section fade">
+  <h2>Our Work</h2>
+ <div class="gallery carousel">
     <img src="img/selec32.jpg" alt="">
     <img src="img/selec33.jpg" alt="">
      <img src="img/selec34.jpg" alt="">
@@ -65,6 +102,7 @@
     <img src="img/selec6.jpg" alt="">
     <img src="img/selec8.jpg" alt="">
   </div>
+
 </section>
 
 <!-- STATS -->
@@ -77,8 +115,7 @@
 
 <!-- SOLUTIONS GRID -->
 <section class="solutions fade">
-  <h2>A legacy of 50 years creating dreams</h2>
-
+  <h2>Legacy of 50 Years Creating Dreams</h2>
   <div class="grid">
     <div class="card"><img src="img/selec7.jpg"><span>Stone Vanity</span></div>
     <div class="card wide"><img src="img/selec8.jpg"><span>Natural Stone Cladding</span></div>
@@ -88,6 +125,48 @@
   </div>
 </section>
 
-<script src="script.js"></script>
+<!-- =========================
+FOOTER / MOBILE BOTTOM BAR
+========================= -->
+<div class="bottombar mobile-only">
+830 W 19th ST, Hialeah Florida 33010 • (305) 884-1223 • info@artemisamarble.com
+</div>
+
+<!-- =========================
+SCRIPTS
+========================= -->
+<script>
+/* HAMBURGER MENU */
+const hamburger = document.getElementById("hamburger");
+const nav = document.getElementById("navMenu");
+hamburger.addEventListener("click", () => {
+  nav.classList.toggle("active");
+  hamburger.classList.toggle("active");
+});
+
+/* FADE ON SCROLL */
+const faders = document.querySelectorAll('.fade');
+const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+const appearOnScroll = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('show');
+    observer.unobserve(entry.target);
+  });
+}, appearOptions);
+faders.forEach(fader => appearOnScroll.observe(fader));
+
+/* CARRUSEL AUTOMATICO */
+const carousel = document.querySelector('.carousel');
+let scrollAmount = 0;
+function autoScroll() {
+  if(!carousel) return;
+  scrollAmount += 1;
+  if(scrollAmount > carousel.scrollWidth - carousel.clientWidth) scrollAmount = 0;
+  carousel.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+}
+setInterval(autoScroll, 30);
+</script>
+
 </body>
 </html>
