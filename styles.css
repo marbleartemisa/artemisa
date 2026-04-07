@@ -23,7 +23,6 @@ TOP BAR
   justify-content: center;
   align-items: center;
   background: #000;
-  color: #fff;
   padding: 5px 30px;
   position: relative;
   z-index: 1000;
@@ -47,12 +46,11 @@ HAMBURGER
 .hamburger {
   display: none;
   flex-direction: column;
-  justify-content: center;
-  cursor: pointer;
   position: absolute;
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
+  cursor: pointer;
   z-index: 2001;
 }
 
@@ -67,11 +65,9 @@ HAMBURGER
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
-
 .hamburger.active span:nth-child(2) {
   opacity: 0;
 }
-
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
@@ -85,7 +81,6 @@ NAVBAR
   justify-content: center;
   padding: 12px 30px;
   background: #000;
-  z-index: 1500;
 }
 
 .navbar nav {
@@ -105,14 +100,12 @@ NAVBAR
 }
 
 /* =========================
-HERO (FRAMER CLEAN)
+HERO
 ========================= */
 .hero {
   height: 100vh;
   position: relative;
-  background-image: url("hero.jpg");
-  background-size: cover;
-  background-position: center;
+  background: url("hero.jpg") center/cover no-repeat;
 }
 
 .overlay {
@@ -139,12 +132,12 @@ HERO (FRAMER CLEAN)
 
 .hero-tagline {
   font-size: 22px;
-  opacity: 0.9;
   margin-bottom: 10px;
+  opacity: 0.9;
 }
 
 .hero-content p {
-  max-width: 900px;
+  max-width: 650px;
   margin: 0 auto 30px;
   line-height: 1.6;
   opacity: 0.9;
@@ -182,28 +175,40 @@ HERO (FRAMER CLEAN)
 }
 
 /* =========================
-ABOUT (FRAMER STYLE)
+TRANSITION
 ========================= */
+.hero-fade-transition {
+  height: 120px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0),
+    #0b0b0f
+  );
+  margin-top: -120px;
+}
 
-.about-preview {
-  padding: 140px 20px;
+.section-divider {
+  height: 80px;
   background: #0b0b0f;
 }
 
+/* =========================
+ABOUT (FIXED + PRO)
+========================= */
+.about-preview {
+  padding: 140px 20px;
+}
+
 .about-container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.5fr; /* 👈 imagen más grande */
   gap: 80px;
   align-items: center;
 }
 
-/* TEXTO */
-.about-text {
-  text-align: left;
-}
-
+/* TEXT */
 .about-text h2 {
   font-size: 44px;
   font-family: 'Playfair Display', serif;
@@ -211,22 +216,20 @@ ABOUT (FRAMER STYLE)
   line-height: 1.1;
 }
 
-/* párrafo tipo Framer (MUY IMPORTANTE) */
 .about-text p {
-  font-size: 16px;
+  max-width: 520px;
   line-height: 1.8;
   color: rgba(255,255,255,0.75);
-  max-width: 520px;
 }
 
-/* BOTÓN */
+/* BUTTON */
 .about-btn {
   display: inline-block;
   margin-top: 25px;
   padding: 12px 22px;
   border: 1px solid white;
-  color: white;
   text-decoration: none;
+  color: white;
   transition: 0.3s;
 }
 
@@ -235,26 +238,23 @@ ABOUT (FRAMER STYLE)
   color: black;
 }
 
-/* IMAGEN */
+/* IMAGE */
+.about-image {
+  display: flex;
+  justify-content: center;
+}
+
 .about-image img {
   width: 100%;
+  max-height: 550px;
+  object-fit: cover;
   border-radius: 16px;
   box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-  transform: scale(1);
   transition: transform 0.6s ease;
 }
 
 .about-image img:hover {
   transform: scale(1.03);
-}
-
-.review-box {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background: rgba(0,0,0,0.7);
-  padding: 12px;
-  border-radius: 10px;
 }
 
 /* =========================
@@ -263,10 +263,10 @@ STATS
 .stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  text-align: center;
   padding: 80px 8%;
   background: white;
   color: black;
+  text-align: center;
 }
 
 /* =========================
@@ -283,16 +283,12 @@ GALLERY
 }
 
 /* =========================
-SOLUTIONS GRID
+SOLUTIONS
 ========================= */
 .solutions .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-}
-
-.card {
-  position: relative;
 }
 
 .card img {
@@ -304,31 +300,6 @@ SOLUTIONS GRID
   position: absolute;
   bottom: 10px;
   left: 10px;
-}
-
-.wide {
-  grid-column: span 2;
-}
-
-/* =========================
-VIEWER (MANTENIDO)
-========================= */
-.viewer-section {
-  max-width: 1200px;
-  margin: 20px auto;
-}
-
-section {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.hero {
-  margin-bottom: 0;
-}
-
-.about-preview {
-  margin-top: 0;
 }
 
 /* =========================
@@ -360,57 +331,16 @@ MOBILE
     right: 0;
   }
 
-  .stats {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-
   .about-container {
     grid-template-columns: 1fr;
+    text-align: center;
   }
 
-}
+  .about-text p {
+    margin: auto;
+  }
 
-.hero-fade-transition {
-  height: 120px;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0) 0%,
-    rgba(255,255,255,0.04) 50%,
-    #0b0b0f 100%
-  );
-  margin-top: -120px;
-}
-
-.section-divider {
-  height: 120px;
-  width: 100%;
-  background: #0b0b0f; /* mismo color base del sitio */
-  position: relative;
-  z-index: 2;
-}
-
-/* opcional: efecto más elegante */
-.section-divider::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(255,255,255,0.15),
-    transparent
-  );
-}
-
-.hero-content p {
-  max-width: 650px;
-  margin: 0 auto 30px auto;
-  text-align: center;
-  line-height: 1.6;
-  opacity: 0.9;
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
 }
