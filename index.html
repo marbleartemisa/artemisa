@@ -178,38 +178,30 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
 });
 
-  // FADE LATERAL PREMIUM PARA ABOUT
-const aboutText = document.querySelector('.about-text');
-const aboutImage = document.querySelector('.about-image');
-
-const appearOptions = {
-  threshold: 0.3,
-  rootMargin: "0px 0px -50px 0px"
-};
-
-const observer = new IntersectionObserver((entries, observer) => {
+// Fade para About Us
+const aboutObserverOptions = { threshold: 0.3, rootMargin: "0px 0px -50px 0px" };
+const aboutObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
     entry.target.classList.add('show');
     observer.unobserve(entry.target);
   });
-}, appearOptions);
+}, aboutObserverOptions);
 
-observer.observe(aboutText);
-observer.observe(aboutImage);
-  
-/* FADE ON SCROLL */
+aboutObserver.observe(aboutText);
+aboutObserver.observe(aboutImage);
+
+// Fade para otras secciones
 const faders = document.querySelectorAll('.fade');
-const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
-const appearOnScroll = new IntersectionObserver((entries, observer) => {
+const fadeObserverOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+const fadeObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
     entry.target.classList.add('show');
     observer.unobserve(entry.target);
   });
-}, appearOptions);
-faders.forEach(fader => appearOnScroll.observe(fader));
-
+}, fadeObserverOptions);
+faders.forEach(fader => fadeObserver.observe(fader));
 /* CARRUSEL AUTOMATICO */
 const carousel = document.querySelector('.carousel');
 
