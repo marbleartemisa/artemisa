@@ -178,8 +178,13 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
 });
 
-// Fade para About Us
+
+/* Fade para About Us */
+const aboutText = document.querySelector('.about-text');   // 👈 AQUI
+const aboutImage = document.querySelector('.about-image'); // 👈 AQUI
+
 const aboutObserverOptions = { threshold: 0.3, rootMargin: "0px 0px -50px 0px" };
+
 const aboutObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
@@ -188,9 +193,14 @@ const aboutObserver = new IntersectionObserver((entries, observer) => {
   });
 }, aboutObserverOptions);
 
-aboutObserver.observe(aboutText);
-aboutObserver.observe(aboutImage);
+// 👇 AQUÍ corregido
+if (aboutText && aboutImage) {
+  aboutObserver.observe(aboutText);
+  aboutObserver.observe(aboutImage);
+}
 
+
+  
 // Fade para otras secciones
 const faders = document.querySelectorAll('.fade');
 const fadeObserverOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
