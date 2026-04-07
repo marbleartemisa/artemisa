@@ -244,13 +244,15 @@ ABOUT (FIXED + PRO)
   justify-content: center;
 }
 
+
+
 .about-image img {
   width: 100%;
-  max-height: 550px;
+  height: 100%;
+  max-height: none;        /* 👈 clave */
   object-fit: cover;
   border-radius: 16px;
   box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-  transition: transform 0.6s ease;
 }
 
 .about-image img:hover {
