@@ -249,6 +249,77 @@ FRAMER CLONE SECTIONS
 </section>
 
 
+  <section class="faq-section">
+
+  <div class="faq-container">
+
+    <!-- LEFT -->
+    <div class="faq-left">
+      <span class="faq-label">FAQs</span>
+
+      <h2 class="faq-title">
+        Answering your<br>questions
+      </h2>
+
+      <p class="faq-text">
+        Got more questions? Send us your enquiry below
+      </p>
+
+      <a href="#" class="faq-btn">
+        Get in touch
+        <span>→</span>
+      </a>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="faq-right">
+
+      <div class="faq-item">
+        <div class="faq-question">
+          What area are you based in?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Our main client base is located in Florida, but we serve multiple regions depending on the project.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          How long does a typical project take?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Project timelines vary depending on complexity, but most projects take between 4–6 weeks.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Do you offer free quotes?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Yes, we provide free estimates and help you evaluate the best solution for your project.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Do you provide a guarantee?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Absolutely. We guarantee both materials and workmanship quality.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
 
   
   
@@ -365,6 +436,26 @@ counters.forEach(counter => {
   };
 
   update();
+});
+
+  /* FAQ ACCORDION */
+
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+  const question = item.querySelector('.faq-question');
+
+  question.addEventListener('click', () => {
+
+    // cerrar otros (modo elegante tipo Framer)
+    faqItems.forEach(i => {
+      if(i !== item) i.classList.remove('active');
+    });
+
+    // toggle actual
+    item.classList.toggle('active');
+
+  });
 });
 </script>
 
