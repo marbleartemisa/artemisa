@@ -501,44 +501,38 @@ WHITE INTRO BEFORE CAROUSEL
 
 }
 
-/* STACK GALLERY FRAMER STYLE */
+/* =========================
+STACK GALLERY HOVER (FRAMER STYLE)
+========================= */
 
 .stack-gallery{
 background:white;
 color:black;
-padding-top:120px;
-}
-
-.stack-intro{
-text-align:center;
-margin-bottom:80px;
-}
-
-.stack-intro h2{
-font-size:48px;
-margin-bottom:10px;
-}
-
-.stack-intro p{
-color:#666;
+padding:120px 0;
 }
 
 .stack-wrapper{
 position:relative;
-height:300vh;
+width:900px;
+height:550px;
+margin:auto;
 }
 
+/* todos apilados */
 .stack-item{
-position:sticky;
-top:120px;
-height:70vh;
-margin:0 auto 40px;
-width:80%;
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
 border-radius:20px;
 overflow:hidden;
-box-shadow:0 20px 60px rgba(0,0,0,0.15);
+box-shadow:0 25px 70px rgba(0,0,0,0.2);
+transition:all .6s cubic-bezier(.2,.8,.2,1);
+cursor:pointer;
 }
 
+/* media */
 .stack-item img,
 .stack-item video{
 width:100%;
@@ -546,14 +540,70 @@ height:100%;
 object-fit:cover;
 }
 
-/* layering */
-.stack-item:nth-child(1){ z-index:1 }
-.stack-item:nth-child(2){ z-index:2 }
-.stack-item:nth-child(3){ z-index:3 }
-.stack-item:nth-child(4){ z-index:4 }
-.stack-item:nth-child(5){ z-index:5 }
-.stack-item:nth-child(6){ z-index:6 }
+/* estado inicial (solo offsets leves) */
+.stack-item:nth-child(1){
+transform:translateY(0px) scale(1);
+z-index:7;
+}
 
+.stack-item:nth-child(2){
+transform:translateY(8px) scale(.98);
+z-index:6;
+}
+
+.stack-item:nth-child(3){
+transform:translateY(16px) scale(.96);
+z-index:5;
+}
+
+.stack-item:nth-child(4){
+transform:translateY(24px) scale(.94);
+z-index:4;
+}
+
+.stack-item:nth-child(5){
+transform:translateY(32px) scale(.92);
+z-index:3;
+}
+
+.stack-item:nth-child(6){
+transform:translateY(40px) scale(.90);
+z-index:2;
+}
+
+.stack-item:nth-child(7){
+transform:translateY(48px) scale(.88);
+z-index:1;
+}
+
+/* HOVER → se despliegan */
+.stack-wrapper:hover .stack-item:nth-child(1){
+transform:translateY(-220px) scale(.92);
+}
+
+.stack-wrapper:hover .stack-item:nth-child(2){
+transform:translateY(-140px) scale(.94);
+}
+
+.stack-wrapper:hover .stack-item:nth-child(3){
+transform:translateY(-60px) scale(.96);
+}
+
+.stack-wrapper:hover .stack-item:nth-child(4){
+transform:translateY(20px) scale(.98);
+}
+
+.stack-wrapper:hover .stack-item:nth-child(5){
+transform:translateY(100px) scale(1);
+}
+
+.stack-wrapper:hover .stack-item:nth-child(6){
+transform:translateY(180px) scale(1.02);
+}
+
+.stack-wrapper:hover .stack-item:nth-child(7){
+transform:translateY(260px) scale(1.04);
+}
 
 /* =========================
 STACK HEADER (FRAMER STYLE)
