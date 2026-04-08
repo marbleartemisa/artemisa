@@ -501,8 +501,9 @@ WHITE INTRO BEFORE CAROUSEL
 
 }
 
+
 /* =========================
-STACK SCROLL COVER
+STACK - CARD SLIDE OVER
 ========================= */
 
 .stack-gallery{
@@ -513,16 +514,16 @@ padding:120px 0;
 
 .stack-wrapper{
 position:relative;
-height:400vh; /* importante para scroll */
+height:600vh; /* controla duración del efecto */
 }
 
-/* cada slide */
+/* cards */
 .stack-item{
 position:sticky;
-top:120px;
+top:140px;
 height:70vh;
 width:80%;
-margin:auto;
+margin:0 auto;
 border-radius:20px;
 overflow:hidden;
 box-shadow:0 30px 80px rgba(0,0,0,0.25);
@@ -536,7 +537,7 @@ height:100%;
 object-fit:cover;
 }
 
-/* layering */
+/* layering (muy importante) */
 .stack-item:nth-child(1){ z-index:1; }
 .stack-item:nth-child(2){ z-index:2; }
 .stack-item:nth-child(3){ z-index:3; }
@@ -545,53 +546,3 @@ object-fit:cover;
 .stack-item:nth-child(6){ z-index:6; }
 .stack-item:nth-child(7){ z-index:7; }
 
-/* =========================
-STACK HEADER (FRAMER STYLE)
-========================= */
-
-.stack-header{
-background:white;
-padding:120px 20px 60px;
-text-align:center;
-}
-
-.stack-header-inner{
-max-width:900px;
-margin:auto;
-}
-
-.stack-label{
-display:inline-block;
-background:#f1f1f1;
-padding:6px 14px;
-border-radius:20px;
-font-size:12px;
-margin-bottom:20px;
-color:#333;
-}
-
-.stack-title{
-font-size:48px;
-font-weight:500;
-margin-bottom:15px;
-color:#111;
-}
-
-.stack-subtitle{
-font-size:18px;
-color:#666;
-line-height:1.6;
-}
-
-/* mobile */
-@media (max-width:900px){
-
-.stack-title{
-font-size:34px;
-}
-
-.stack-subtitle{
-font-size:16px;
-}
-
-}
