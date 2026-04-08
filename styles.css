@@ -410,3 +410,71 @@ CAROUSEL
   scroll-behavior: auto;
   gap: 10px;
 }
+
+/* =========================
+WHITE INTRO BEFORE CAROUSEL
+========================= */
+.white-intro {
+  background: white;
+  color: #111;
+  padding: 120px 8% 40px;
+}
+
+.white-intro-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.white-left small {
+  display: inline-block;
+  background: #eee;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.white-left h2 {
+  font-size: 64px;
+  line-height: 1.05;
+  font-weight: 500;
+}
+
+.white-right p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+
+/* carousel section white */
+.carousel-section {
+  background: white;
+  padding: 40px 8% 100px;
+}
+
+.carousel-section h2 {
+  color: black;
+  margin-bottom: 20px;
+}
+
+.carousel-section img {
+  border-radius: 8px;
+}
+
+/* MOBILE */
+@media (max-width: 900px){
+
+.white-intro-container{
+  grid-template-columns: 1fr;
+}
+
+.white-left h2{
+  font-size: 42px;
+}
+
+}
