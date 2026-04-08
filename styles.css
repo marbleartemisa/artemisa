@@ -550,19 +550,22 @@ STACK SCROLL COVER (FIXED)
 
 .stack-wrapper{
   position:relative;
-  height:480vh; /* 6 items */
+  height:400vh;
 }
 
 /* cada slide */
-.stack-item{
+   .stack-item{
   position:sticky;
-  top:120px;
+  top:0;   /* 👈 esto elimina el hueco final */
   height:70vh;
   width:75%;
   margin:auto;
   border-radius:20px;
   overflow:hidden;
   box-shadow:0 30px 80px rgba(0,0,0,0.25);
+  transform:scale(0.95);
+  transition:all 0.5s ease;
+}
 
   /* quitar espacio extra */
   margin-bottom:0;
