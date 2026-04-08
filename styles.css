@@ -542,21 +542,21 @@ STACK HEADER
 /* =========================
 STACK SCROLL COVER (FIXED)
 ========================= */
+
 .stack-gallery{
   background:white;
-  padding-bottom:40px;
+  padding-bottom:0;
 }
-
 
 .stack-wrapper{
   position:relative;
-  height:480vh; /* ajusta según cantidad de slides */
+  height:480vh; /* 6 items */
 }
 
 /* cada slide */
 .stack-item{
   position:sticky;
-  top:100px;
+  top:120px;
   height:70vh;
   width:75%;
   margin:auto;
@@ -564,8 +564,9 @@ STACK SCROLL COVER (FIXED)
   overflow:hidden;
   box-shadow:0 30px 80px rgba(0,0,0,0.25);
 
-  /* 👇 CLAVE PARA EL EFECTO */
-  margin-bottom:120px;
+  /* quitar espacio extra */
+  margin-bottom:0;
+
   transform:scale(0.95);
   transition:all 0.5s ease;
 }
@@ -578,24 +579,17 @@ STACK SCROLL COVER (FIXED)
   object-fit:cover;
 }
 
-/* layering REAL */
-.stack-item:nth-child(1){ opacity:1; }
-.stack-item:nth-child(2){ opacity:0.9; }
-.stack-item:nth-child(3){ opacity:0.85; }
-.stack-item:nth-child(4){ opacity:0.8; }
-.stack-item:nth-child(5){ opacity:0.75; }
-.stack-item:nth-child(6){ opacity:0.7; }
+/* layering */
+.stack-item:nth-child(1){ z-index:6; }
+.stack-item:nth-child(2){ z-index:5; }
+.stack-item:nth-child(3){ z-index:4; }
+.stack-item:nth-child(4){ z-index:3; }
+.stack-item:nth-child(5){ z-index:2; }
+.stack-item:nth-child(6){ z-index:1; }
 
-/* efecto al hacer scroll (opcional pero PRO) */
 .stack-item:hover{
   transform:scale(1);
 }
-
-
-.stack-item{
-  opacity:0.6;
-}
-
 /* =========================
 FAQ SECTION
 ========================= */
