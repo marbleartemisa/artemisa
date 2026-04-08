@@ -503,7 +503,7 @@ WHITE INTRO BEFORE CAROUSEL
 
 
 /* =========================
-STACK - CARD SLIDE OVER
+STACK SCROLL COVER
 ========================= */
 
 .stack-gallery{
@@ -514,16 +514,16 @@ padding:120px 0;
 
 .stack-wrapper{
 position:relative;
-height:600vh; /* controla duración del efecto */
+height:400vh; /* importante para scroll */
 }
 
-/* cards */
+/* cada slide */
 .stack-item{
 position:sticky;
-top:140px;
+top:120px;
 height:70vh;
 width:80%;
-margin:0 auto;
+margin:auto;
 border-radius:20px;
 overflow:hidden;
 box-shadow:0 30px 80px rgba(0,0,0,0.25);
@@ -537,7 +537,7 @@ height:100%;
 object-fit:cover;
 }
 
-/* layering (muy importante) */
+/* layering */
 .stack-item:nth-child(1){ z-index:1; }
 .stack-item:nth-child(2){ z-index:2; }
 .stack-item:nth-child(3){ z-index:3; }
@@ -545,4 +545,3 @@ object-fit:cover;
 .stack-item:nth-child(5){ z-index:5; }
 .stack-item:nth-child(6){ z-index:6; }
 .stack-item:nth-child(7){ z-index:7; }
-
