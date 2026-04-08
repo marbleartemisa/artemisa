@@ -542,15 +542,15 @@ STACK HEADER
 /* =========================
 STACK SCROLL COVER (FIXED)
 ========================= */
-
 .stack-gallery{
   background:white;
-  padding-bottom:150px;
+  padding-bottom:40px;
 }
+
 
 .stack-wrapper{
   position:relative;
-  height:700vh; /* 👈 IMPORTANTE (depende de cantidad de items) */
+  height:480vh; /* ajusta según cantidad de slides */
 }
 
 /* cada slide */
