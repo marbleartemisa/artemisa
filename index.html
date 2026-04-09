@@ -519,32 +519,38 @@ faqItems.forEach(item => {
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
 <script>
-(function(){
-  emailjs.init("TU_PUBLIC_KEY"); // 👈 pega tu public key aquí
-})();
+document.addEventListener("DOMContentLoaded", function(){
 
-const form = document.getElementById("contactForm");
+  emailjs.init("iR8ieJnOkI4_sr8TH");
 
-form.addEventListener("submit", function(e){
-  e.preventDefault();
+  const form = document.getElementById("contactForm");
 
-  const btn = form.querySelector("button");
-  btn.innerText = "Sending...";
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
 
-  emailjs.sendForm(
-    "service_vkt5xuo",   // ✅ tu service
-    "template_23uzxx9",  // ✅ tu template REAL
-    this
-  )
-  .then(() => {
-    btn.innerText = "Message sent ✅";
-    form.reset();
-  })
-  .catch((error) => {
-    console.error(error);
-    btn.innerText = "Send message";
-    alert("Error sending message ❌");
+    const btn = form.querySelector("button");
+    btn.innerText = "Sending...";
+    btn.disabled = true;
+
+    emailjs.sendForm(
+      "service_vkt5xuo",
+      "template_23uzxx9",
+      this
+    )
+    .then(() => {
+      btn.innerText = "Message sent ✅";
+      btn.disabled = false;
+      form.reset();
+    })
+    .catch((error) => {
+      console.error(error);
+      btn.innerText = "Send message";
+      btn.disabled = false;
+      alert("Error sending message ❌");
+    });
+
   });
+
 });
 </script>
   
