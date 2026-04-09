@@ -538,36 +538,34 @@ STACK HEADER
   line-height:1.6;
 }
 
+
 /* =========================
-STACK SCROLL (FRAMER STYLE)
+STACK SCROLL COVER (FIXED)
 ========================= */
 
 .stack-gallery{
   background:white;
+  padding-bottom:0;
 }
 
 .stack-wrapper{
   position:relative;
-  height:300vh; /* IMPORTANTE: 100vh por cada item */
+  height:240vh;
 }
 
-/* cada tarjeta sticky */
+/* cada slide */
 .stack-item{
-  position:sticky;
-  top:0;
-  height:100vh;
-  width:80%;
-  margin:auto;
-  border-radius:20px;
-  overflow:hidden;
-  box-shadow:0 30px 80px rgba(0,0,0,0.25);
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  transform:scale(0.92);
-  transition:all 0.6s ease;
+  position: sticky;
+  top: 0;
+  height: 70vh;
+  width: 75%;
+  margin: auto;
+  margin-bottom: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.25);
+  transform: scale(0.95);
+  transition: all 0.5s ease;
 }
 
 /* media */
@@ -578,23 +576,16 @@ STACK SCROLL (FRAMER STYLE)
   object-fit:cover;
 }
 
-/* superposición */
-.stack-item:nth-child(1){ z-index:1; }
-.stack-item:nth-child(2){ z-index:2; }
-.stack-item:nth-child(3){ z-index:3; }
-.stack-item:nth-child(4){ z-index:4; }
-
-.stack-item:hover{
-  transform:scale(0.97);
-}
+/* layering */
+.stack-item:nth-child(1){ z-index:4; }
+.stack-item:nth-child(2){ z-index:3; }
+.stack-item:nth-child(3){ z-index:2; }
+.stack-item:nth-child(4){ z-index:1; }
 
 .stack-item{
-  transform-origin:center top;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.stack-item:not(:last-child){
-  margin-bottom:50vh;
-}
 /* =========================
 FAQ SECTION
 ========================= */
