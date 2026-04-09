@@ -327,9 +327,17 @@ body {
 }
 
 .gallery img {
-  width: 20%;
+  height: 220px;        /* altura uniforme */
+  width: 300px;         /* evita deformación */
+  flex-shrink: 0;       /* no se encogen */
+  object-fit: cover;    /* recorte elegante */
   border-radius: 10px;
 }
+
+.carousel {
+  scroll-behavior: smooth;
+}
+  
 
 /* =========================
    SOLUTIONS
