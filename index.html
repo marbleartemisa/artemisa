@@ -515,6 +515,38 @@ faqItems.forEach(item => {
   });
 });
 </script>
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
+<script>
+(function(){
+  emailjs.init("TU_PUBLIC_KEY"); // 👈 pega tu public key aquí
+})();
+
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const btn = form.querySelector("button");
+  btn.innerText = "Sending...";
+
+  emailjs.sendForm(
+    "service_vkt5xuo",   // ✅ tu service
+    "template_23uzxx9",  // ✅ tu template REAL
+    this
+  )
+  .then(() => {
+    btn.innerText = "Message sent ✅";
+    form.reset();
+  })
+  .catch((error) => {
+    console.error(error);
+    btn.innerText = "Send message";
+    alert("Error sending message ❌");
+  });
+});
+</script>
+  
 </body>
 </html>
