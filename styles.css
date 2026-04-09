@@ -793,6 +793,10 @@ TESTIMONIALS SECTION
 CONTACT SECTION
 ========================= */
 
+/* =========================
+CONTACT FIX
+========================= */
+
 .contact-section{
   background:#0b0b0f;
   padding:120px 8%;
@@ -802,11 +806,16 @@ CONTACT SECTION
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:80px;
-  max-width:1400px;
+  max-width:1200px;
   margin:auto;
+  align-items:start;
 }
 
 /* LEFT */
+.contact-left{
+  color:white;
+}
+
 .contact-label{
   display:inline-block;
   background:#1a1a1f;
@@ -817,14 +826,13 @@ CONTACT SECTION
 }
 
 .contact-title{
-  font-size:56px;
+  font-size:48px;
   margin-bottom:20px;
 }
 
 .contact-text{
   color:#aaa;
   margin-bottom:30px;
-  line-height:1.6;
 }
 
 .contact-info p{
@@ -832,35 +840,23 @@ CONTACT SECTION
   color:#ccc;
 }
 
-.socials{
-  margin-top:40px;
-}
-
-.icons{
-  display:flex;
-  gap:15px;
-  margin-top:10px;
-}
-
-.icons i{
-  background:#1a1a1f;
-  padding:10px;
-  border-radius:50%;
-  font-size:12px;
-}
-
 /* FORM */
 .contact-form{
-  background:#f5f5f5;
+  background:#f2f2f2;
   padding:30px;
   border-radius:10px;
 }
 
+/* 👇 CLAVE: FORM EN COLUMNA */
+.contact-form form{
+  display:flex;
+  flex-direction:column;
+}
+
 .contact-form label{
-  display:block;
-  font-size:13px;
   margin-bottom:5px;
-  color:#333;
+  font-size:13px;
+  color:#222;
 }
 
 .contact-form input,
@@ -870,7 +866,7 @@ CONTACT SECTION
   margin-bottom:15px;
   border:1px solid #ddd;
   border-radius:6px;
-  font-family:inherit;
+  font-size:14px;
 }
 
 .contact-form textarea{
@@ -879,27 +875,18 @@ CONTACT SECTION
 }
 
 .contact-form button{
-  width:100%;
+  margin-top:10px;
   padding:14px;
   background:#0b0b0f;
   color:white;
   border:none;
   border-radius:6px;
   cursor:pointer;
-  transition:0.3s;
-}
-
-.contact-form button:hover{
-  opacity:0.8;
 }
 
 /* MOBILE */
 @media(max-width:900px){
   .contact-container{
     grid-template-columns:1fr;
-  }
-
-  .contact-title{
-    font-size:40px;
   }
 }
