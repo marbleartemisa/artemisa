@@ -326,14 +326,14 @@ body {
   gap: 10px;
 }
 
+
 .gallery img {
-  height: 220px;        /* altura uniforme */
-  width: 300px;         /* evita deformación */
-  flex-shrink: 0;       /* no se encogen */
-  object-fit: cover;    /* recorte elegante */
+  width: 360px;
+  height: 300px; /* 👈 AUMENTA ESTO */
+  object-fit: cover;
+  flex-shrink: 0;
   border-radius: 10px;
 }
-
 
   
 
