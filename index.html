@@ -552,26 +552,22 @@ document.addEventListener("DOMContentLoaded", function(){
   });
 
 });
-  const stackItems = document.querySelectorAll(".stack-item");
+const stackItems = document.querySelectorAll(".stack-item");
 
 window.addEventListener("scroll", () => {
   stackItems.forEach((item, i) => {
     const rect = item.getBoundingClientRect();
     const windowHeight = window.innerHeight;
 
-    // cuánto está visible (0 → 1)
     const progress = 1 - (rect.top / windowHeight);
-
-    // clamp
     const clamped = Math.max(0, Math.min(progress, 1));
 
-    // escala progresiva
     const scale = 0.9 + (clamped * 0.1);
-
-    // ligera opacidad para profundidad
     const opacity = 0.6 + (clamped * 0.4);
 
-    item.style.transform = `scale(${scale})`;
+    const y = (1 - clamped) * 50; // 👈 AQUÍ
+
+    item.style.transform = `scale(${scale}) translateY(${y}px)`; // 👈 AQUÍ
     item.style.opacity = opacity;
   });
 });
