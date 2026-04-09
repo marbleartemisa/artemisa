@@ -334,9 +334,7 @@ body {
   border-radius: 10px;
 }
 
-.carousel {
-  scroll-behavior: smooth;
-}
+
   
 
 /* =========================
@@ -508,6 +506,7 @@ WHITE INTRO BEFORE CAROUSEL
 }
 
 }
+
 
 /* =========================
 STACK HEADER
