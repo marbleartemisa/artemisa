@@ -586,6 +586,10 @@ STACK SCROLL COVER (FIXED)
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+.stack-item{
+  transform-origin: center top;
+}
+
 /* =========================
 FAQ SECTION
 ========================= */
@@ -783,9 +787,6 @@ TESTIMONIALS SECTION
   }
 }
 
-/* =========================
-CONTACT SECTION
-========================= */
 
 /* =========================
 CONTACT FIX
