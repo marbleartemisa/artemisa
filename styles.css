@@ -702,3 +702,89 @@ FAQ SECTION
     font-size:40px;
   }
 }
+
+/* =========================
+TESTIMONIALS SECTION
+========================= */
+
+.testimonials-section{
+  background:#f5f5f5;
+  padding:120px 0;
+  overflow:hidden;
+}
+
+.testimonials-header{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.testimonials-header span{
+  display:inline-block;
+  background:#ddd;
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:12px;
+  margin-bottom:15px;
+}
+
+.testimonials-header h2{
+  font-size:48px;
+  color:#111;
+  margin-bottom:10px;
+}
+
+.testimonials-header p{
+  color:#555;
+}
+
+/* ROW */
+.testimonial-row{
+  overflow:hidden;
+  white-space:nowrap;
+  margin:30px 0;
+}
+
+/* TRACK */
+.testimonial-track{
+  display:inline-flex;
+  gap:20px;
+}
+
+/* CARDS */
+.testimonial-card{
+  min-width:300px;
+  background:white;
+  color:#111;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  font-size:14px;
+}
+
+/* ANIMATIONS */
+.left .testimonial-track{
+  animation: scrollLeft 25s linear infinite;
+}
+
+.right .testimonial-track{
+  animation: scrollRight 25s linear infinite;
+}
+
+/* KEYFRAMES */
+@keyframes scrollLeft{
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollRight{
+  from{
+    transform: translateX(-50%);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
