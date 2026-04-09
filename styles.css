@@ -550,7 +550,7 @@ STACK SCROLL COVER (FIXED)
 
 .stack-wrapper{
   position:relative;
-  height:300vh;
+  height:240vh;
 }
 
 /* cada slide */
@@ -583,12 +583,11 @@ STACK SCROLL COVER (FIXED)
 }
 
 /* layering */
-.stack-item:nth-child(1){ z-index:6; }
-.stack-item:nth-child(2){ z-index:5; }
-.stack-item:nth-child(3){ z-index:4; }
-.stack-item:nth-child(4){ z-index:3; }
-.stack-item:nth-child(5){ z-index:2; }
-.stack-item:nth-child(6){ z-index:1; }
+.stack-item:nth-child(1){ z-index:4; }
+.stack-item:nth-child(2){ z-index:3; }
+.stack-item:nth-child(3){ z-index:2; }
+.stack-item:nth-child(4){ z-index:1; }
+
 
 .stack-item:hover{
   transform:scale(1);
