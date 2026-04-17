@@ -956,3 +956,56 @@ CONTACT FIX
 .icons i:hover{
   opacity:1;
 }
+
+/* =========================
+   MOBILE (UNIFICADO)
+========================= */
+@media (max-width: 768px) {
+
+  /* TOP */
+  .topbar-left {
+    display: none;
+  }
+
+  .logo-center img {
+    height: 45px;
+  }
+
+  /* HAMBURGER */
+  .hamburger {
+    display: flex;
+  }
+
+  /* NAV MOBILE (OFF CANVAS LIMPIO) */
+  .navbar nav {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    width: 260px;
+    height: 100vh;
+    background: #000;
+    flex-direction: column;
+    padding-top: 120px;
+    transition: 0.3s;
+  }
+
+  .navbar nav.active {
+    right: 0;
+  }
+
+  /* HERO */
+  .hero {
+    height: 85vh;
+  }
+
+  .company-name {
+    font-size: 26px;
+  }
+
+  .hero-tagline {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
