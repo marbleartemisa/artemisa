@@ -235,3 +235,12 @@ img {
   width: 100%;
 }
 
+.carousel {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carousel img {
+  height: clamp(200px, 30vw, 350px);
+  object-fit: cover;
+}
