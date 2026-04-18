@@ -52,22 +52,26 @@ body {
 }
 
 @media (max-width: 900px) {
+
   .topbar {
     flex-direction: column;
-    padding: 10px;
+    padding: 10px 15px;
+    height: auto;
   }
 
   .topbar-left.desktop-only {
-    position: static;
-    transform: none;
-    font-size: 12px;
+    position: static;        /* 👈 clave */
+    transform: none;         /* 👈 clave */
     margin-bottom: 5px;
+    font-size: 12px;
     text-align: center;
+    white-space: normal;
   }
 
   .logo-center img {
     height: 70px;
   }
+
 }
 
 
@@ -494,6 +498,23 @@ body {
     padding: 12px 10px;
     display: block;
     border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+}
+
+@media (max-width: 900px) {
+
+  .hero {
+    min-height: auto;
+    padding: 60px 0;
+  }
+
+  .hero-content {
+    position: relative;   /* 👈 CAMBIO CLAVE */
+    top: auto;
+    left: auto;
+    transform: none;
+    padding: 20px;
   }
 
 }
