@@ -147,25 +147,21 @@ body {
 /* =========================
    HERO SECTION
 ========================= */
-.hero {
-  min-height: 90vh;
-  height: 90vh;  /*height: 100vh;*/
-  position: relative;
-  background: url("hero.jpg") center / cover no-repeat;
-}
+
 
 .hero {
+  height: 100vh;              /* 👈 fuerza pantalla completa */
+  min-height: 650px;          /* 👈 evita que se vea corto en laptops */
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 100px 0;   /* 👈 esto empuja arriba y abajo */
+  position: relative;
+  background: url("hero.jpg") center center / cover no-repeat;
 }
 
 .hero {
-  min-height: 70vh;
-  height: auto;
+  border: 5px solid red;
 }
-
 .overlay {
   position: absolute;
   inset: 0;
@@ -510,11 +506,12 @@ body {
 
 }
 
-@media (max-width: 900px) {
 
+@media (max-width: 900px) {
   .hero {
-    min-height: auto;
-    padding: 60px 0;
+    height: 85vh;
+    min-height: 500px;
+    padding: 40px 0;
   }
 
   .hero-content {
