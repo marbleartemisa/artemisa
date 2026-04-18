@@ -51,6 +51,26 @@ body {
   height: 100px;
 }
 
+@media (max-width: 900px) {
+  .topbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .topbar-left.desktop-only {
+    position: static;
+    transform: none;
+    font-size: 12px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  .logo-center img {
+    height: 70px;
+  }
+}
+
+
 /* =========================
    HAMBURGER MENU
 ========================= */
@@ -405,6 +425,16 @@ body {
     transition: 0.3s;
   }
 
+   .navbar nav {
+     padding: 120px 25px 40px; /* 👈 espacio interno */
+   }
+
+   .navbar nav a {
+     padding: 12px 10px;
+     display: block;
+     border-bottom: 1px solid rgba(255,255,255,0.1); /* opcional elegante */
+   }
+
   .navbar nav.active {
     right: 0;
   }
@@ -447,6 +477,27 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 900px) {
+
+  .topbar-left.desktop-only {
+    display: none;
+  }
+
+  .navbar nav {
+    padding: 120px 25px 40px;
+    gap: 5px;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+  }
+
+  .navbar nav a {
+    padding: 12px 10px;
+    display: block;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+}
+
 /* =========================
    CAROUSEL
 ========================= */
