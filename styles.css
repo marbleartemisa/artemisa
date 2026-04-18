@@ -122,9 +122,15 @@ body {
    HERO SECTION
 ========================= */
 .hero {
-  height: 100vh;
+  min-height: 70vh;
+  height: auto;  /*height: 100vh;*/
   position: relative;
   background: url("hero.jpg") center / cover no-repeat;
+}
+
+.hero {
+  min-height: 70vh;
+  height: auto;
 }
 
 .overlay {
@@ -434,6 +440,11 @@ body {
   }
 }
 
+@media (max-width: 768px){
+  .solutions .grid {
+    grid-template-columns: 1fr;
+  }
+}
 /* =========================
    CAROUSEL
 ========================= */
