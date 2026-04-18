@@ -148,10 +148,17 @@ body {
    HERO SECTION
 ========================= */
 .hero {
-  min-height: 70vh;
-  height: auto;  /*height: 100vh;*/
+  min-height: 90vh;
+  height: 90vh;  /*height: 100vh;*/
   position: relative;
   background: url("hero.jpg") center / cover no-repeat;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;   /* 👈 esto empuja arriba y abajo */
 }
 
 .hero {
@@ -166,23 +173,24 @@ body {
 }
 
 .hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;   /* 👈 clave */
+  top: auto;
+  left: auto;
+  transform: none;
   width: 90%;
   max-width: 1100px;
   text-align: center;
   z-index: 2;
 }
 
+
 .company-name {
   font-family: 'Playfair Display', serif;
-  font-size: 46px;
+  font-size: 56px;
 }
 
 .hero-tagline {
-  font-size: 22px;
+  font-size: 24px;
   margin-bottom: 10px;
   opacity: 0.9;
 }
