@@ -17,14 +17,9 @@ body {
 }
 
 body {
-  padding: 0 20px;
+  padding: 0 40px;
 }
 
-@media (max-width: 768px) {
-  body {
-    padding: 0 15px;
-  }
-}
 /* =========================
    TOP BAR
 ========================= */
@@ -121,8 +116,7 @@ body {
    HERO SECTION
 ========================= */
 .hero {
-  min-height: 70vh;
-  height: auto;
+  height: 100vh;
   position: relative;
   background: url("hero.jpg") center / cover no-repeat;
 }
@@ -253,12 +247,11 @@ body {
 }
 
 .about-title {
-  font-size: clamp(28px, 5vw, 56px);
+  font-size: 56px;
   line-height: 1.05;
   margin: 20px 0;
   font-family: 'Playfair Display', serif;
 }
-
 
 .about-text p {
   font-size: 18px;
@@ -335,14 +328,14 @@ body {
 
 
 .gallery img {
-  width: 100%;
-  height: auto;
+  width: 360px;
+  height: 390px; /* 👈 AUMENTA ESTO */
   object-fit: cover;
   flex-shrink: 0;
   border-radius: 10px;
 }
 
-
+  
 
 /* =========================
    SOLUTIONS
@@ -368,11 +361,6 @@ body {
   left: 10px;
 }
 
-@media (max-width: 768px){
-  .solutions .grid {
-    grid-template-columns: 1fr;
-  }
-}
 /* =========================
    VISIBILITY
 ========================= */
@@ -546,7 +534,7 @@ STACK HEADER
 }
 
 .stack-title{
-  font-size: clamp(28px, 5vw, 56px);
+  font-size:56px;
   font-family:'Playfair Display', serif;
   margin-bottom:20px;
 }
@@ -609,12 +597,6 @@ STACK SCROLL COVER (FIXED)
   transform-origin: center top;
 }
 
-@media(max-width:768px){
-  .stack-item{
-    width: 95%;
-    height: 50vh;
-  }
-}
 /* =========================
 FAQ SECTION
 ========================= */
@@ -644,7 +626,7 @@ FAQ SECTION
 }
 
 .faq-title{
-  font-size: clamp(28px, 5vw, 56px);
+  font-size:56px;
   font-family:'Playfair Display', serif;
   margin-bottom:20px;
   color:#111;
@@ -831,12 +813,6 @@ CONTACT FIX
   align-items:start;
 }
 
-@media(max-width:768px){
-  .contact-container{
-    gap: 40px;
-  }
-}
-
 /* LEFT */
 .contact-left{
   color:white;
@@ -853,7 +829,7 @@ CONTACT FIX
 }
 
 .contact-title{
-  font-size: clamp(28px, 5vw, 56px);
+  font-size:56px;
   font-weight:500;
   letter-spacing:-1px;
   margin-bottom:25px;
@@ -980,56 +956,3 @@ CONTACT FIX
 .icons i:hover{
   opacity:1;
 }
-
-/* =========================
-   MOBILE (UNIFICADO)
-========================= */
-@media (max-width: 768px) {
-
-  /* TOP */
-  .topbar-left {
-    display: none;
-  }
-
-  .logo-center img {
-    height: 45px;
-  }
-
-  /* HAMBURGER */
-  .hamburger {
-    display: flex;
-  }
-
-  /* NAV MOBILE (OFF CANVAS LIMPIO) */
-  .navbar nav {
-    position: fixed;
-    right: -100%;
-    top: 0;
-    width: 260px;
-    height: 100vh;
-    background: #000;
-    flex-direction: column;
-    padding-top: 120px;
-    transition: 0.3s;
-  }
-
-  .navbar nav.active {
-    right: 0;
-  }
-
-  /* HERO */
-  .hero {
-    height: 85vh;
-  }
-
-  .company-name {
-    font-size: 26px;
-  }
-
-  .hero-tagline {
-    font-size: 14px;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-  }
