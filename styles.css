@@ -62,7 +62,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-  z-index: 2001;
+  z-index: 4001;
 }
 
 .hamburger span {
@@ -94,11 +94,13 @@ body {
   justify-content: center;
   padding: 12px 30px;
   background: #000;
+  z-index: 2000;
 }
 
 .navbar nav {
   display: flex;
   gap: 25px;
+  z-index: 3000;
 }
 
 .navbar nav a {
