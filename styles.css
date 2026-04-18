@@ -159,9 +159,7 @@ body {
   background: url("hero.jpg") center center / cover no-repeat;
 }
 
-.hero {
-  border: 5px solid red;
-}
+
 .overlay {
   position: absolute;
   inset: 0;
