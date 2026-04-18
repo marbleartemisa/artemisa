@@ -334,8 +334,8 @@ body {
 
 
 .gallery img {
-  width: 100%;    /*width: 360px;*/
-  height: auto;  /* height: 390px; 👈 AUMENTA ESTO */
+  width: 360px;
+  height: 390px;  /* 👈 AUMENTA ESTO */
   object-fit: cover;
   flex-shrink: 0;
   border-radius: 10px;
