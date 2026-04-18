@@ -612,7 +612,12 @@ STACK SCROLL COVER (FIXED)
 .stack-item{
   transform-origin: center top;
 }
-
+@media(max-width:768px){
+  .stack-item{
+    width: 95%;
+    height: 50vh;
+  }
+}
 /* =========================
 FAQ SECTION
 ========================= */
