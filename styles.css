@@ -17,7 +17,7 @@ body {
 }
 
 body {
-  padding: 0 20px;
+  padding: 0;
 }
 
 @media (max-width: 768px) {
@@ -269,6 +269,7 @@ body {
   position: relative;
   background: url("hero.jpg") center center / cover no-repeat;
 }
+
 
 
 .overlay {
@@ -1300,25 +1301,25 @@ PREMIUM HEADER UPGRADE
   gap:28px;
   align-items:center;
 }
+
 .topbar-info{
   display:flex;
   justify-content:space-between;
   align-items:center;
 
-  padding:10px 50px;
+  padding:8px 50px;
 
   font-size:13px;
-  color:rgba(255,255,255,0.72);
+  color:rgba(255,255,255,0.75);
 
   border-bottom:1px solid rgba(255,255,255,0.06);
-
-  letter-spacing:0.4px;
 }
 
 .topbar-address,
 .topbar-phone{
   white-space:nowrap;
 }
+
 .main-nav nav a{
   color: rgba(255,255,255,0.92);
   text-decoration:none;
