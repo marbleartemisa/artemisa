@@ -257,6 +257,7 @@ body {
 
 
 .hero {
+  margin-top:140px;
   height: 100vh;              /* 👈 fuerza pantalla completa */
   min-height: 650px;          /* 👈 evita que se vea corto en laptops */
   display: flex;
