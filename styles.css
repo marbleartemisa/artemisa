@@ -132,6 +132,9 @@ body {
 
 @media(max-width:900px){
 
+.topbar-info{
+  display:none;
+   }
   .topbar-info{
     display:none;
   }
@@ -1297,7 +1300,25 @@ PREMIUM HEADER UPGRADE
   gap:28px;
   align-items:center;
 }
+.topbar-info{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 
+  padding:10px 50px;
+
+  font-size:13px;
+  color:rgba(255,255,255,0.72);
+
+  border-bottom:1px solid rgba(255,255,255,0.06);
+
+  letter-spacing:0.4px;
+}
+
+.topbar-address,
+.topbar-phone{
+  white-space:nowrap;
+}
 .main-nav nav a{
   color: rgba(255,255,255,0.92);
   text-decoration:none;
