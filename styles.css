@@ -1161,3 +1161,132 @@ CONTACT FIX
 .icons i:hover{
   opacity:1;
 }
+/* =========================
+PREMIUM HEADER UPGRADE
+========================= */
+
+.topbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+
+  z-index:5000;
+
+  background:rgba(0,0,0,0.45);
+  backdrop-filter:blur(14px);
+
+  border-bottom:1px solid rgba(255,255,255,0.08);
+
+  display:flex;
+  flex-direction:column;
+
+  transition:0.3s ease;
+}
+
+/* TOP INFO */
+
+.topbar-info{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:10px 50px;
+
+  font-size:13px;
+
+  color:rgba(255,255,255,0.7);
+
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+/* MAIN HEADER */
+
+.topbar-main{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:18px 50px;
+}
+
+/* LOGO */
+
+.logo-center img{
+  height:85px;
+  transition:0.3s ease;
+}
+
+.logo-center img:hover{
+  transform:scale(1.03);
+}
+
+/* NAVBAR */
+
+.navbar{
+  background:transparent;
+  padding:0;
+  width:auto;
+}
+
+.navbar nav{
+  display:flex;
+  align-items:center;
+  gap:32px;
+}
+
+.navbar nav a{
+  color:white;
+  text-decoration:none;
+
+  font-size:15px;
+
+  opacity:0.85;
+
+  transition:0.3s ease;
+}
+
+.navbar nav a:hover{
+  opacity:1;
+}
+
+/* PORTAL BUTTON */
+
+.portal-btn{
+  border:1px solid rgba(255,255,255,0.5);
+
+  padding:10px 22px;
+
+  border-radius:8px;
+
+  background:rgba(255,255,255,0.04);
+}
+
+.portal-btn:hover{
+  background:white;
+  color:black !important;
+}
+
+/* HERO OFFSET */
+
+.hero{
+  margin-top:140px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+  .topbar-info{
+    display:none;
+  }
+
+  .topbar-main{
+    padding:14px 20px;
+  }
+
+  .logo-center img{
+    height:65px;
+  }
+
+}
