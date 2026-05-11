@@ -284,9 +284,10 @@ body {
   left: auto;
   transform: none;
   width: 90%;
-  max-width: 1100px;
-  text-align: center;
-  z-index: 2;
+  max-width: 700px;
+  text-align: left;
+    margin-left: 8%;
+  z-index: 3;
 }
 
 
