@@ -290,10 +290,22 @@ body {
   z-index: 3;
 }
 
+.hero-gradient{
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(circle at 70% 50%,
+    rgba(255,255,255,0.08),
+    transparent 45%);
+    z-index:1;
+}
 
-.company-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 56px;
+.company-name{
+    font-family:'Playfair Display', serif;
+    font-size: clamp(52px, 6vw, 88px);
+    line-height: 0.95;
+    letter-spacing: -2px;
+    font-weight: 500;
 }
 
 .hero-tagline {
