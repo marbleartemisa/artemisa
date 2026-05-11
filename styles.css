@@ -329,13 +329,14 @@ body {
   flex-wrap: wrap;
 }
 
-.hero-buttons a {
-  padding: 14px 28px;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: 0.3s;
-}
 
+.hero-buttons a{
+    padding:16px 34px;
+    border-radius:14px;
+    backdrop-filter: blur(12px);
+    border:1px solid rgba(255,255,255,0.25);
+    transition: all .4s ease;
+}
 .primary {
   background: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -347,9 +348,24 @@ body {
   color: white;
 }
 
-.hero-buttons a:hover {
-  background: white;
-  color: black;
+
+.hero-buttons a:hover{
+    transform: translateY(-3px);
+    background:white;
+    color:black;
+}
+.hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 18px;
+    border:1px solid rgba(255,255,255,0.18);
+    border-radius:50px;
+    margin-bottom:28px;
+    font-size:13px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    backdrop-filter:blur(10px);
 }
 
 /* =========================
@@ -1191,7 +1207,7 @@ PREMIUM HEADER UPGRADE
 
   z-index:5000;
 
-  background:rgba(0,0,0,0.45);
+   background: rgba(0,0,0,0.35);
   backdrop-filter:blur(14px);
 
   border-bottom:1px solid rgba(255,255,255,0.08);
@@ -1287,8 +1303,10 @@ PREMIUM HEADER UPGRADE
 
 /* HERO OFFSET */
 
+
 .hero{
-  margin-top:140px;
+   display:flex;
+   align-items:center;
 }
 
 /* MOBILE */
@@ -1365,4 +1383,14 @@ PREMIUM HEADER UPGRADE
 
 .logo-center img:hover{
   transform: scale(1.03);
+}
+.scroll-indicator{
+    position:absolute;
+    bottom:40px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:12px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    opacity:.7;
 }
