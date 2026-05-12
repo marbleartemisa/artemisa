@@ -1783,3 +1783,137 @@ section{
 }
 
 }
+
+/* =========================================================
+MOBILE HERO UX FIX
+AGREGAR AL FINAL DEL styles.css
+========================================================= */
+
+@media (max-width:768px){
+
+/* ===== HEADER MÁS COMPACTO ===== */
+
+.topbar-main{
+    height:72px;
+    padding:0 16px;
+}
+
+.logo-center img{
+    height:42px;
+    width:auto;
+}
+
+/* ===== HERO ===== */
+
+.hero{
+    min-height:auto;
+    height:auto;
+
+    padding:
+    120px
+    20px
+    60px;
+
+    background-position:68% center;
+}
+
+/* overlay más oscuro para leer mejor */
+
+.overlay{
+    background:rgba(0,0,0,0.52);
+}
+
+/* ===== HERO CONTENT ===== */
+
+.hero-content{
+    width:100%;
+    max-width:100%;
+
+    margin-left:0;
+
+    padding-top:40px;
+    padding-left:5px;
+    padding-right:5px;
+}
+
+/* ===== BADGE ===== */
+
+.hero-badge{
+    font-size:11px;
+
+    padding:8px 14px;
+
+    margin-bottom:18px;
+}
+
+/* ===== TITULO ===== */
+
+.company-name{
+    font-size: clamp(34px, 9vw, 46px);
+
+    line-height:0.95;
+
+    letter-spacing:-1px;
+
+    margin-bottom:10px;
+}
+
+/* ===== SUBTITLE ===== */
+
+.hero-tagline{
+    font-size:18px;
+
+    margin-bottom:14px;
+}
+
+/* ===== TEXTO ===== */
+
+.hero-content p{
+    font-size:15px;
+
+    line-height:1.7;
+
+    max-width:100%;
+
+    margin-bottom:24px;
+}
+
+/* ===== BOTONES ===== */
+
+.hero-buttons{
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:14px;
+
+    margin-top:10px;
+}
+
+.hero-buttons a{
+    width:100%;
+
+    max-width:240px;
+
+    text-align:center;
+
+    padding:14px 20px;
+
+    border-radius:12px;
+
+    font-size:15px;
+}
+
+/* ===== MENU MOBILE ===== */
+
+.main-nav nav{
+    padding-top:100px;
+}
+
+.main-nav nav a{
+    font-size:14px;
+
+    letter-spacing:2px;
+}
+
+}
