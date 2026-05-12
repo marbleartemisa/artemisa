@@ -31,21 +31,6 @@ body {
    PREMIUM HEADER
 ========================= */
 
-.topbar{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  z-index:5000;
-
-  background:rgba(0,0,0,0.45);
-  backdrop-filter:blur(14px);
-
-  border-bottom:1px solid rgba(255,255,255,0.08);
-
-  display:flex;
-  flex-direction:column;
-}
 
 /* TOP INFO */
 
@@ -128,26 +113,7 @@ body {
   color:black !important;
 }
 
-/* MOBILE */
 
-@media(max-width:900px){
-
-.topbar-info{
-  display:none;
-   }
-  .topbar-info{
-    display:none;
-  }
-
-  .topbar-main{
-    padding:14px 20px;
-  }
-
-  .logo-center img{
-    height:65px;
-  }
-
-}
 
 .topbar-left.desktop-only {
   position: absolute;
@@ -159,29 +125,6 @@ body {
 
 .logo-center img {
   height: 100px;
-}
-
-@media (max-width: 900px) {
-
-  .topbar {
-    flex-direction: column;
-    padding: 10px 15px;
-    height: auto;
-  }
-
-  .topbar-left.desktop-only {
-    position: static;        /* 👈 clave */
-    transform: none;         /* 👈 clave */
-    margin-bottom: 5px;
-    font-size: 12px;
-    text-align: center;
-    white-space: normal;
-  }
-
-  .logo-center img {
-    height: 70px;
-  }
-
 }
 
 
@@ -219,40 +162,7 @@ body {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* =========================
-   NAVBAR
-========================= */
-.navbar {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 12px 30px;
-  background: #000;
-  z-index: 3000;
-}
 
-.navbar nav {
-  display: flex;
-  gap: 25px;
-  z-index: 3000;
-}
-
-.navbar nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 15px;
-}
-
-.portal-btn {
-  border: 1px solid white;
-  padding: 8px 18px;
-  transition: 0.3s;
-}
-
-.portal-btn:hover {
-  background: white;
-  color: black;
-}
 
 /* =========================
    HERO SECTION
@@ -625,43 +535,6 @@ body {
   }
 }
 
-@media (max-width: 900px) {
-
-  .topbar-left.desktop-only {
-    display: none;
-  }
-
-  .navbar nav {
-    padding: 120px 25px 40px;
-    gap: 5px;
-    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
-  }
-
-  .navbar nav a {
-    padding: 12px 10px;
-    display: block;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
-
-}
-
-
-@media (max-width: 900px) {
-  .hero {
-    height: 85vh;
-    min-height: 500px;
-    padding: 40px 0;
-  }
-
-  .hero-content {
-    position: relative;   /* 👈 CAMBIO CLAVE */
-    top: auto;
-    left: auto;
-    transform: none;
-    padding: 20px;
-  }
-
-}
 
 /* =========================
    CAROUSEL
@@ -1199,24 +1072,6 @@ CONTACT FIX
 PREMIUM HEADER UPGRADE
 ========================= */
 
-.topbar{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-
-  z-index:5000;
-
-   background: rgba(0,0,0,0.35);
-  backdrop-filter:blur(14px);
-
-  border-bottom:1px solid rgba(255,255,255,0.08);
-
-  display:flex;
-  flex-direction:column;
-
-  transition:0.3s ease;
-}
 
 /* TOP INFO */
 
@@ -1245,11 +1100,6 @@ PREMIUM HEADER UPGRADE
 }
 
 /* LOGO */
-
-.logo-center img{
-  height:85px;
-  transition:0.3s ease;
-}
 
 .logo-center img:hover{
   transform:scale(1.03);
@@ -1430,6 +1280,8 @@ section{
     background:rgba(0,0,0,.92);
     backdrop-filter:blur(14px);
 }
+
+
 
 /* ===== MAIN HEADER ===== */
 
