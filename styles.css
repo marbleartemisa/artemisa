@@ -503,9 +503,6 @@ body {
   display: block;
 }
 
-.mobile-only {
-  display: none;
-}
 
 /* =========================
    MOBILE
@@ -1749,6 +1746,7 @@ AGREGAR AL FINAL DEL styles.css
 /* ===== HEADER MÁS COMPACTO ===== */
 
 .topbar-main{
+   position: relative;
     height:72px;
     padding:0 16px;
 }
@@ -1997,3 +1995,24 @@ FIX HAMBURGER MOBILE
   }
 }
 
+#hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 99999;
+}
+
+#hamburger span {
+  width: 30px;
+  height: 3px;
+  margin: 5px 0;
+  background: white;
+  display: block;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  #hamburger {
+    display: flex !important;
+    flex-direction: column;
+  }
+}
