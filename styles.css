@@ -1917,3 +1917,21 @@ AGREGAR AL FINAL DEL styles.css
 }
 
 }
+
+/* ===== MOBILE SHORT TEXT ===== */
+
+.mobile-text{
+    display:none;
+}
+
+@media(max-width:768px){
+
+.desktop-text{
+    display:none;
+}
+
+.mobile-text{
+    display:block;
+}
+
+}
